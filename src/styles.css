@@ -1,0 +1,11 @@
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+* {
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  background-image: url('https://dmarket.com/blog/best-dota2-wallpapers/jager1_hu1b4a36ef01c87d5ebc4581a2b5b7191b_364471_1920x1080_resize_q100_lanczos.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}

@@ -1,0 +1,43 @@
+<p-fieldset legend="Win rate calculator" class="wrap">
+  <form [formGroup]="form" (submit)="calculateWinrate()">
+    <div>
+      <div>จำนวนเกม</div>
+      <input pInputText formControlName="totalGame" type="number" />
+      <div
+        class="error"
+        *ngIf="
+          form.controls.totalGame.invalid && form.controls.totalGame.touched
+        "
+      >
+        <p-message severity="error" text="กรอกด้วยไอเปรต"></p-message>
+      </div>
+    </div>
+
+    <div>
+      <div>ชนะ</div>
+      <input pInputText formControlName="winTime" type="number" />
+      <div
+        class="error"
+        *ngIf="form.controls.winTime.invalid && form.controls.winTime.touched"
+      >
+        <p-message severity="error" text="กรอกด้วยไอเปรต"></p-message>
+      </div>
+    </div>
+    <br />
+
+    <button
+      pButton
+      pRipple
+      type="submit"
+      style="width:40%"
+      label="คำนวณ"
+    ></button>
+
+    <br />
+    <br />
+
+    <hr />
+    <div>ชนะ {{ winrate | number: '1.2-2' }} %</div>
+    <div>แพ้ {{ loseRate | number: '1.2-2' }} %</div>
+  </form>
+</p-fieldset>
